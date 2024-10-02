@@ -12,12 +12,12 @@ export default function Header() {
 
     useEffect(() => {
         if (!user) {
-            setUser({
+            /* setUser({
                 id: 2,
                 name: "mark",
                 isAdmin: true,
                 likedBooks: []
-            })
+            }) */
         }
         if(!books){
             setBooks(booksMock)
@@ -32,7 +32,7 @@ export default function Header() {
                 <nav className='nav'>
                     <ul className='ul'>
                         <li className='li'><Link to={ROUTES.ROOT} className='a-li'>HOME</Link></li>
-                        {user && <li className='li'><Link to={ROUTES.FAVORITES} className='a-li'>FAVORITES</Link></li>}
+                        {user? <li className='li'><Link to={ROUTES.FAVORITES} className='a-li'>FAVORITES</Link></li> : <li className='li'><Link to={ROUTES.LOGIN_SIGNUP} className='a-li'>LOGIN</Link></li> }
                         <li className='li'><Link to={ROUTES.ABOUT} className='a-li'>ABOUT</Link></li>
                         <li className='li'><Link to={ROUTES.CONTACT} className='a-li'>CONTACT</Link></li>
 

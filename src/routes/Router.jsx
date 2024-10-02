@@ -6,6 +6,7 @@ import BookPage from "../pages/Book.page";
 import FavoritesPage from "../pages/Favorites.page";
 import Aboutpage from "../pages/About.page";
 import Contactpage from "../pages/Contact.page";
+import LoginSignupPage from "../pages/LoginSignup.Page";
 
 
 export default function Router() {
@@ -16,7 +17,7 @@ export default function Router() {
       <Route path={ROUTES.FAVORITES} element={<FavoritesPage />} />
       <Route path={ROUTES.ABOUT} element={<Aboutpage />} />
       <Route path={ROUTES.CONTACT} element={<Contactpage />} />
-      {/* <Route path="*" element={<ErrorPage />} /> */}
+      <Route path={ROUTES.LOGIN_SIGNUP} element={<LoginSignupPage />} />
     </Routes>
   );
 }

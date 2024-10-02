@@ -1,4 +1,4 @@
-import { httpService } from './http.service'
+import { httpService } from './http.services'
 
 
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
@@ -13,8 +13,8 @@ export const userService = {
     saveLocalUser,
     getUsers,
     getById,
-    remove,
-    save,
+    /* remove, */
+    /* save, */
     getEmptyUser
 }
 
@@ -94,9 +94,12 @@ async function logout() {
 
 function getEmptyUser() {
     return {
-        fullname: '',
-        username: '',
-        password: ''
+        password: '',
+        email:'',
+        first:'',
+        middle:'',
+        last:'',
+        phone:'',
     }
 }
 

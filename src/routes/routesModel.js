@@ -3,7 +3,8 @@ const ROUTES = {
   BOOKPAGE: "/book/:bookId",
   FAVORITES: "/favorites",
   ABOUT:"/aboutPage",
-  CONTACT:"/contactPage"
+  CONTACT:"/contactPage",
+  LOGIN_SIGNUP:"/loginsignup"
 };
 
 export default ROUTES;
